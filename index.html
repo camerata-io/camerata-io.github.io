@@ -13,15 +13,46 @@ hello. :-)
         <meta name="description" content="Tollervey Ltd.">
         <meta name="author" content="Nicholas H.Tollervey">
         <style>
+            @font-face {
+                font-family: 'Linux Libertine'; /* normal */
+                src: url('/LinLibertine_R.woff') format('woff');
+                font-weight: normal;
+                font-style: normal;
+            }
+
+            @font-face {
+                font-family: 'Linux Libertine'; /* italic */
+                src: url('/LinLibertine_RI.woff') format('woff');
+                font-weight: normal;
+                font-style: italic;
+            }
+
+            @font-face {
+                font-family: 'Linux Libertine'; /* bold */
+                src: url('/LinLibertine_RB.woff') format('woff');
+                font-weight: bold;
+                font-style: normal;
+            }
+
+            @font-face {
+                font-family: 'Linux Libertine'; /* bold */
+                src: url('/LinLibertine_RBI.woff') format('woff');
+                font-weight: bold;
+                font-style: italic;
+            }
             body {
                 text-align: center;
                 color: #222;
                 background: #fff;
-                font-family: 'Georgia','Times',serif;
+                font-family: 'Linux Libertine','Georgia','Times',serif;
+                font-weight: 400;
             }
-            p, ul {
-              font-size: 1.4em;
+            @media only screen and (min-width: 768px) {
+                body {
+                    font-size: 1.4em;
+                }
             }
+
             ul {
               max-width: 840px;
               text-align: left;
